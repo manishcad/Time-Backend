@@ -1,10 +1,24 @@
 schemaVersion: 1.1
-endpoints:
-  - name: my-express-app
-    displayName: My Express Application
-    type: REST
-    service:
-      basePath: /
+component:
+  name: time-news-backend
+  displayName: Time News Backend
+  description: Backend service for Time News application.
+  type: Service
+  source:
+    type: GitHub
+    repository: github.com/your-username/time-news-backend
+    branch: main
+    language: NodeJS
+    build:
+      commands:
+        - npm install
+        - npm run build
+    startCommand: npm start
+    docker:
       port: 5000
-    networkVisibilities:
-      - Public
+service:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 5000
+      targetPort: 5000
