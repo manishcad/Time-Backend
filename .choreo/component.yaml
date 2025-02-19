@@ -22,3 +22,15 @@ service:
       protocol: TCP
       port: 5000
       targetPort: 5000
+networking:
+  allowPublicAccess: true
+  ingressRules:
+    - port: 3000
+      allowedOrigins:
+        - "*"
+
+observability:
+  logging:
+    level: INFO
+  monitoring:
+    enabled: true
