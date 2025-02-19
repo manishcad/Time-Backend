@@ -1,12 +1,12 @@
 schemaVersion: 1.1
 component:
-  name: time-news-backend
+  name: Time-Backend
   displayName: Time News Backend
   description: Backend service for Time News application.
   type: Service
   source:
     type: GitHub
-    repository: github.com/your-username/time-news-backend
+    repository: github.com/manishcad/time-news-backend
     branch: main
     language: NodeJS
     build:
